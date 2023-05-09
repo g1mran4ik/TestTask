@@ -1,0 +1,14 @@
+version: "3"
+
+services: 
+  api:
+    build:
+      context: ../../api
+      dockerfile: ./docker/dev/Dockerfile
+    volumes:
+     - ../../api/src:/home/stats/src
+    restart: always
+    networks: 
+     - postgre_network
+     - nginx_network
+    

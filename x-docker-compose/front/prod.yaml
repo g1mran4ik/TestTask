@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  front:
+    build: 
+      context: ../../front/
+      dockerfile: ./docker/prod/Dockerfile
+    networks:
+      - nginx_network

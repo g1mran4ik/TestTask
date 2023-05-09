@@ -1,0 +1,62 @@
+.custom-progress circle {
+  visibility: hidden !important;
+}
+
+.cards-block {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.employee-card {
+  width: 700px;
+}
+
+.employee-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-text {
+  height: 3.5rem;
+}
+
+.employee-name {
+  margin: 0;
+}
+
+.employee-role {
+  color: grey;
+}
+
+.phone-block {
+  display: flex;
+  align-items: center;
+}
+
+.employee-phone {
+  margin-right: .5rem;
+}
+
+.phone-icons-block {
+  margin-right: .5rem;
+  border-radius: 50%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.stats {
+  height: 3.5rem;
+}
+
+.month-stats-header {
+  margin-right: 1rem;
+}
+
+.month-stats-plans {
+  overflow: auto;
+  max-height: 75vh;
+}
+
+.plans-task {
+  padding-right: 2rem;
+}

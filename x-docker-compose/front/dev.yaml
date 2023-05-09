@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  front:
+    build:
+      context: ../../front/
+      dockerfile: ./docker/dev/Dockerfile
+    volumes:
+     - ../../front/src:/home/stats/src
+    stdin_open: true
+    tty: true
+    networks:
+      - nginx_network
