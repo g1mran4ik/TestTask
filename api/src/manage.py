@@ -19,4 +19,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main() 
+    from django.contrib.auth.models import User
+    User.objects.filter(username='admin').first() or User.objects.create_superuser('admin', 'admin@admin.admin', 'admin')
+
