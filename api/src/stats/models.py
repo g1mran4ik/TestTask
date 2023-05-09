@@ -68,7 +68,7 @@ class Employee(models.Model):
 	
 	@property
 	def month_efficiency(self):
-		effective_months = [p.rating for p in self.month_plans.exclude(date__month=datetime.now().month) if p.rating > 8]
+		effective_months = [p.rating for p in self.month_plans.exclude(date__month=datetime.now().month) if p.rating >= 8]
 		return round(len(effective_months)/self.experience, 2)*100
 	
 
@@ -82,7 +82,7 @@ class Employee(models.Model):
 		return self.last_name + " " + self.first_name + " " + self.surname
 
 	class Meta:
-		ordering = ['surname']
+		ordering = ['last_name']
 
 
 class MonthPlan(models.Model):
@@ -97,7 +97,7 @@ class MonthPlan(models.Model):
 		return average_efficiency
 	
 	def __str__(self):
-		return self.date.strftime("%d/%m/%Y") + " " + self.employee.surname
+		return self.date.strftime("%d/%m/%Y") + " " + self.employee.last_name
 	
 	class Meta:
 		ordering = ['date']
